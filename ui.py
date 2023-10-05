@@ -11,10 +11,10 @@ current_date_and_time = datetime.now()
 
 
 config = {
-  "apiKey": os.getenv('apiKey'),
-  "authDomain": os.getenv('authDomain'),
-  "databaseURL": os.getenv('databaseURL'),
-  "storageBucket": os.getenv('storageBucket')
+  "apiKey": st.secrets['apiKey'],
+  "authDomain": st.secrets['authDomain'],
+  "databaseURL": st.secrets['databaseURL'],
+  "storageBucket": st.secrets['storageBucket']
 }
 
 firebase = pyrebase.initialize_app(config)
