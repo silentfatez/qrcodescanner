@@ -1,4 +1,5 @@
 pyrebase4
 requests==2.19.1
 urllib3==1.21.1
-protobuf=3.13.0
+protobuf==3.13.0
+kfp==2.0.0b16
