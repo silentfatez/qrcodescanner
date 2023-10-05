@@ -1,2 +1,2 @@
 pyrebase4
-urlib3
+urllib3==2.06
