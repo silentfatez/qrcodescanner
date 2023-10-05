@@ -5,10 +5,10 @@ current_date_and_time = datetime.now()
 
 
 config = {
-  "apiKey": "AIzaSyAyu6fK0BGH561voCpAHAz5lN-t7PCE0P8",
-  "authDomain": "qr-code-scanner-aa9e6.firebaseapp.com",
-  "databaseURL": "https://qr-code-scanner-aa9e6-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  "storageBucket": "qr-code-scanner-aa9e6.appspot.com"
+  "apiKey": st.secrets.apiKey,
+  "authDomain":st.secrets.authDomain,
+  "databaseURL": st.secrets.databaseURL,
+  "storageBucket": st.secrets.storageBucket
 }
 
 firebase = pyrebase.initialize_app(config)
