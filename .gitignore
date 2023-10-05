@@ -1,2 +1,3 @@
 ui_copy.py
 *.ipynb
+.env

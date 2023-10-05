@@ -1,14 +1,20 @@
 import streamlit as st
 import pyrebase
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
 current_date_and_time = datetime.now()
 
 
 config = {
-  "apiKey": st.secrets.apiKey,
-  "authDomain":st.secrets.authDomain,
-  "databaseURL": st.secrets.databaseURL,
-  "storageBucket": st.secrets.storageBucket
+  "apiKey": os.getenv('apiKey'),
+  "authDomain": os.getenv('authDomain'),
+  "databaseURL": os.getenv('databaseURL'),
+  "storageBucket": os.getenv('storageBucket')
 }
 
 firebase = pyrebase.initialize_app(config)
@@ -43,7 +49,7 @@ if submit_button:
         st.write('Sucess')
         st.balloons()
         datadict.update({validation_code:False})
-        database.child("qr_test_codes").update(datadict)
+        database.child("qr_code_codes").update(datadict)
 
     elif result=='not avail':
         st.error('Failure', icon='🚨')
