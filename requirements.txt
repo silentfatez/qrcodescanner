@@ -1,2 +1,2 @@
 pyrebase4
-urlib3==2.0.4
+urlib3==2.0.2
